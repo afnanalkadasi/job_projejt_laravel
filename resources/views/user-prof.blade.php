@@ -7,7 +7,7 @@
     <title>User Profil</title>
     <script src="https://kit.fontawesome.com/53e9ef6681.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/info_style.css">
+    <link rel="stylesheet" href="../assets/css/info_style.css">
 </head>
 <body>
     <div class="container">
@@ -19,11 +19,11 @@
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <div class="card-body">
-                            <a href="index.html"> 
+                            <a href="/index"> 
                                 <i class="fas fa-home me-3" style="color: #272162; font-size: 28px;"></i>
                                 </a>
                       <div class="d-flex flex-column align-items-center text-center">
-                        <img src="img/ui-zac.jpg" alt="Admin" class="rounded-circle" width="150">
+                        <img src="../assets/img/ui-zac.jpg" alt="Admin" class="rounded-circle" width="150">
                         <div class="mt-3">
                           <h4> احمد محمد</h4>
                           <p class="text-secondary mb-1">مطور مواقع ويب</p>

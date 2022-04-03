@@ -7,7 +7,7 @@
     <title>information</title>
     <script src="https://kit.fontawesome.com/53e9ef6681.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link  rel="stylesheet" href="css/info_style.css">
+    <link  rel="stylesheet" href="../assets/css/info_style.css">
 </head>
 <body>
 
@@ -18,14 +18,14 @@
             <div class="col-auto col-md-3 col-xl-2  px-0 " style="background-color: #272162;">
                
                 <div class="d-flex flex-column align-items-center align-items-sm-start   text-white min-vh-100">
-                    <a href="index.html"> 
+                    <a href="/index"> 
                       <i class="fas fa-home me-3" style="color: white; font-size: 28px;"></i>
                       </a>
                     <a href="#" class="d-flex align-items-center py-1 px-4 me-md-auto text-white text-decoration-none">
                         <h1>أفنان</h1>
                     </a>
                     <a href="#" >
-                        <img src="img/im2.png" alt="hugenerd" width="230" height="230" class="im_size">
+                        <img src="../assets/img/im2.png" alt="hugenerd" width="230" height="230" class="im_size">
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu" role="tablist">
                       <li class="nav-item"  role="presentation">
