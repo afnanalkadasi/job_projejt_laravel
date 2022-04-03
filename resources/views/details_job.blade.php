@@ -7,55 +7,55 @@
     <title>details_job</title>
       <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <link  rel="stylesheet" href="css/style.css">
+      <link  rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                    <a class="navbar-brand mx-3" href="#">
-                            <img src="img/log.png" alt="" width="30" height="24" class="d-inline-block  img-fluid">
-                            وظيفتي
-                         </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-             </button>
-             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="jobs.html"> الوظائف</a> </li>
-                <li class="nav-item"><a class="nav-link" href="service.html"> خدماتنا</a></li>
-                <li class="nav-item"><a class="nav-link " href="about_as.html"> من نحن</a></li>
-                <li class="nav-item"><a class="nav-link " href="company.html">شركاتنا</a></li> 
-  
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    حساب المستخدم
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" style="color: black;" href="information1.html">معلومات المستخدم</a></li>
-                    <li><a class="dropdown-item" style="color: black;" href="other_users.html"> مستخدمين اخرين</a></li>
-                        <li><a class="dropdown-item" style="color: black;" href="#">خروج</a></li>
-                      </ul>
-                </li> 
-                <li class="nav-item"><a class="nav-link " href="contact.html">الاتصال بنا</a></li> 
-                <li class="nav_item"  id="en"  ><a href="#"class="nav-link "  >English</a></li>
-                <li class="nav_item" onclick="togglestyle()" id="ar"  style="display: none;"><a href="#"class="nav-link " >عربي</a></li>
-            
-            </ul>
-              <button class="btn btn-sm btn-outline-secondary me-auto" type="button"><a href="sign_up.html">إنشاء حساب</a>   </button>           
-          <button class="btn btn-sm btn-outline-secondary me-3" type="button"> <a href="login.html">تسجيل الدخول</a> </button>           
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="#">
+                <img src="../assets/img/log.png" alt="" width="30" height="24" class="d-inline-block  img-fluid">
+                وظيفتي
+             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index">الرئيسية</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/jobs"> الوظائف</a> </li>
+            <li class="nav-item"><a class="nav-link" href="/service"> خدماتنا</a></li>
+            <li class="nav-item"><a class="nav-link " href="/about_as"> من نحن</a></li>
+            <li class="nav-item"><a class="nav-link " href="/company">شركاتنا</a></li> 
 
-          <form class="d-flex me-auto search_he">
-            <input class="form-control " id="searchbar" onkeyup="search_ele()" type="search" placeholder="بحث" aria-label="Search">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                حساب المستخدم
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" style="color: black;" href="/information1">معلومات المستخدم</a></li>
+                <li><a class="dropdown-item" style="color: black;" href="/other_users"> مستخدمين اخرين</a></li>
+                    <li><a class="dropdown-item" style="color: black;" href="#">خروج</a></li>
+                  </ul>
+            </li> 
+            <li class="nav-item"><a class="nav-link " href="/contact">الاتصال بنا</a></li> 
+            <li class="nav_item"  id="en"  ><a href="#"class="nav-link "  >English</a></li>
+            <li class="nav_item" onclick="togglestyle()" id="ar"  style="display: none;"><a href="#"class="nav-link " >عربي</a></li>
+        
+          </ul>
+          <button class="btn btn-sm btn-outline-secondary me-auto" type="button"><a href="/sign_up">إنشاء حساب</a>   </button>           
+      <button class="btn btn-sm btn-outline-secondary me-3" type="button"> <a href="/login">تسجيل الدخول</a> </button>           
 
-          </form>
-            </div>
-            </div>
-          </nav>
-    </header>
+      <form class="d-flex me-auto search_he">
+        <input class="form-control " id="searchbar" onkeyup="search_ele()" type="search" placeholder="بحث" aria-label="Search">
+
+      </form>
+        </div>
+        </div>
+      </nav>
+</header>
     <main>
         <section class="section1 ">
             <div class=" text-secondary px-4 py-5 text-center" style="background-color:#272162; opacity: .9;">
@@ -106,7 +106,7 @@
                                       <div class="col-lg-12 my-2">
                                           <div class="row row-cols-md-2">
                                               <div>
-                                                  <img class="card-img  " style="height:150px;width:250px;" src="img/comp5.jpg" alt="image">
+                                                  <img class="card-img  " style="height:150px;width:250px;" src="../assets/img/comp5.jpg" alt="image">
                                               </div>
                                               <div class="px-3">
                                                   <p><i class="fas fa-ellipsis-v" aria-hidden="true"> &nbsp;
@@ -204,7 +204,7 @@
             <div class=" ">
                     <div class="col">
                             <a href="" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                              <img  src="img/log.png"  class="bi me-2" width="40" height="32"> 
+                              <img  src="../assets/img/log.png"  class="bi me-2" width="40" height="32"> 
                             </a>
                             <p class="text-muted"> أحد محركات البحث عن الوظائف في المنطقة العربية، يجلب لك عدة وظائف  </p>
                     </div>
