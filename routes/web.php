@@ -12,45 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',function(){
-    return view("index");
-});
-Route::get('/index',function(){
-    return view("index");
-});
-Route::get('/about_as',function(){
-    return view("about_as");
-});
-
-Route::get('/contact',function(){
-    return view("contact");
-});
-Route::get('/company',function(){
-    return view("company");
-});
-Route::get('/details_job',function(){
-    return view("details_job");
-});
-Route::get('/information1',function(){
-    return view("information1");
-});
-
-Route::get('/jobs',function(){
-    return view("jobs");
-});
-Route::get('/login',function(){
-    return view("login");
-});
-Route::get('/other_users',function(){
-    return view("other_users");
-});
-Route::get('/service',function(){
-    return view("service");
-});
-
-Route::get('/sign_up',function(){
-    return view("sign_up");
-});
-Route::get('/user-prof',function(){
-    return view("user-prof");
-});
+Route::view('/','web.index')->name('index');
+Route::view('/index','web.index')->name('index');
+Route::view('/about_as','web.about_as')->name('about_as');
+Route::view('/contact','web.contact')->name('contact');
+Route::view('/company','web.company')->name('company');
+Route::view('/details_job','web.details_job')->name('details_job');
+Route::view('/information1','web.information1')->name('information1');
+Route::view('/jobs','web.jobs')->name('jobs');
+Route::view('/other_users','web.other_users')->name('other_users');
+Route::view('/user-prof','web.user-prof')->name('user-prof');
+Route::view('/service','web.service')->name('service');
+Route::view('/login','auth.login')->name('login');
+Route::view('/sign_up','auth.sign_up')->name('sign_up');
