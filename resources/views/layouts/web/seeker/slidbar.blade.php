@@ -138,21 +138,22 @@
   <ul class="menu-inner py-1">
     <!-- Dashboards -->
   
-    <li class="menu-item">
+
+ <li class="menu-item">
     <a href="javascript:void(0);" class="menu-link menu-toggle">
       <i class="menu-icon tf-icons bx bx-user"></i>
-      <div data-i18n="المهارات">المهارات</div>
+      <div data-i18n="المستخدمين">المستخدمين</div>
     </a>
     <ul class="menu-sub">
-    <li class="menu-item">
-        <a href="{{ route('add_skill') }}" class="menu-link">
-          <div data-i18n="اضافة مهارة">اضافة مهارة</div>
+    <!-- <li class="menu-item">
+        <a href="/admin/new_user" class="menu-link">
+          <div data-i18n="اضافة مستخدم">اضافة مستخدم</div>
         </a>
-      </li>
+      </li> -->
 
       <li class="menu-item">
-        <a href="{{ route('skills') }}" class="menu-link">
-          <div data-i18n="عرض المهارات">عرض المهارات</div>
+        <a href="{{ route('users') }}" class="menu-link">
+          <div data-i18n="عرض المستخدمين">عرض المستخدمين</div>
         </a>
       </li>
      
