@@ -6,6 +6,9 @@ use App\Http\Controllers\user\ExperienceController;
 use App\Http\Controllers\user\CourseController;
 use App\Http\Controllers\user\EducationController;
 
+
+use App\Http\Controllers\admin\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,9 +49,11 @@ Route::view('/sign_up','auth.sign_up')->name('sign_up');
         Route::view('/users','admin.users')->name('users');
         Route::view('/add_user','admin.add_user')->name('add_user');
         Route::view('/edit_user','admin.edit_user')->name('edit_user');
-        Route::view('/categories','admin.categories')->name('categories');
-        Route::view('/add_category','admin.add_category')->name('add_category');
-        Route::view('/edit_category','admin.edit_category')->name('edit_category');
+
+        Route::get('/admin/categories',[CategoryController::class,'listAll'])->name('categories');
+        Route::get('/admin/add_category',[CategoryController::class,'create'])->name('add_category');
+        Route::post('/admin/save_category',[CategoryController::class,'store'])->name('save_category');
+        Route::view('/admin/edit_category','admin.edit_category')->name('edit_category');
         
         
         ///////////////////////// Start   user Dashboard /////////////////////////
@@ -64,11 +69,12 @@ Route::view('/sign_up','auth.sign_up')->name('sign_up');
           Route::post('/user/save_experience',[ExperienceController::class,'store'])->name('save_experience');
           Route::view('/user/edit_experience','user.edit_experience')->name('edit_experience');
 
-          Route::view('/educations','user.educations')->name('educations');
-          Route::view('/add_education','user.add_education')->name('add_education');
-          Route::post('/user/save_experience',[ExperienceController::class,'store'])->name('save_experience');
-          Route::view('/edit_education','user.edit_education')->name('edit_education');
+          Route::get('/user/courses',[CourseController::class,'listAll'])->name('courses');
+          Route::get('/user/add_course',[CourseController::class,'create'])->name('add_course');
+          Route::post('/user/save_course',[CourseController::class,'store'])->name('save_course');
+          Route::view('/user/edit_course','user.edit_course')->name('edit_course');
 
-          Route::view('/courses','user.courses')->name('courses');
-          Route::view('/add_course','user.add_course')->name('add_course');
-          Route::view('/edit_course','user.edit_course')->name('edit_course');
+          Route::get('/user/educations',[EducationController::class,'listAll'])->name('educations');
+          Route::get('/user/add_education',[EducationController::class,'create'])->name('add_education');
+          Route::post('/user/save_education',[EducationController::class,'store'])->name('save_education');
+          Route::view('/user/edit_education','user.edit_education')->name('edit_education');
