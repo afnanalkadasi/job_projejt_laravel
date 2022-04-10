@@ -11,7 +11,10 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\AuthController;
 // use App\Http\Controllers\admin\CategoryController;
 // use App\Http\Controllers\admin\CategoryController;
-// use App\Http\Controllers\admin\CategoryController;
+
+use App\Http\Controllers\admin\SettingsController;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +25,10 @@ use App\Http\Controllers\admin\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::group(['prefix' => LaravelLocalization::setLocale(),
+//     'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function(){ //...
+ 
+//     });
 Route::view('/','front.index')->name('index');
 Route::view('/index','front.index')->name('index');
 Route::view('/about_as','front.about_as')->name('about_as');
@@ -57,7 +64,11 @@ Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
         Route::get('/admin/add_category',[CategoryController::class,'create'])->name('add_category');
         Route::post('/admin/save_category',[CategoryController::class,'store'])->name('save_category');
         Route::view('/admin/edit_category','admin.edit_category')->name('edit_category');
-        
+
+        Route::get('/generate_roles',[SettingsController::class,'generateRoles'])->name('generate_roles');
+        Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+        Route::get('/login',[AuthController::class,'showLogin'])->name('login');
+        Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
         
         ///////////////////////// Start   user Dashboard /////////////////////////
           Route::view('/information','user.information')->name('information');
