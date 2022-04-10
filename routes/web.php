@@ -43,6 +43,9 @@ Route::view('/service','front.service')->name('service');
 Route::view('/login','auth.login')->name('login');
 Route::get('/sign_up',[AuthController::class,'create'])->name('sign_up');
 Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
+Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+Route::get('/login',[AuthController::class,'showLogin'])->name('login');
+Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
 
         ///////////////////////// Start admins of admin Dashboard /////////////////////////
 
@@ -60,15 +63,14 @@ Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
         Route::view('/add_user','admin.add_user')->name('add_user');
         Route::view('/edit_user','admin.edit_user')->name('edit_user');
 
+
         Route::get('/admin/categories',[CategoryController::class,'listAll'])->name('categories');
         Route::get('/admin/add_category',[CategoryController::class,'create'])->name('add_category');
         Route::post('/admin/save_category',[CategoryController::class,'store'])->name('save_category');
         Route::view('/admin/edit_category','admin.edit_category')->name('edit_category');
 
         Route::get('/generate_roles',[SettingsController::class,'generateRoles'])->name('generate_roles');
-        Route::get('/logout',[AuthController::class,'logout'])->name('logout');
-        Route::get('/login',[AuthController::class,'showLogin'])->name('login');
-        Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
+     
         
         ///////////////////////// Start   user Dashboard /////////////////////////
           Route::view('/information','user.information')->name('information');
