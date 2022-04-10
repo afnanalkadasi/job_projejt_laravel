@@ -8,7 +8,10 @@ use App\Http\Controllers\user\EducationController;
 
 
 use App\Http\Controllers\admin\CategoryController;
-
+use App\Http\Controllers\admin\AuthController;
+// use App\Http\Controllers\admin\CategoryController;
+// use App\Http\Controllers\admin\CategoryController;
+// use App\Http\Controllers\admin\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,8 +34,8 @@ Route::view('/other_users','front.other_users')->name('other_users');
 Route::view('/user-prof','front.user-prof')->name('user-prof');
 Route::view('/service','front.service')->name('service');
 Route::view('/login','auth.login')->name('login');
-Route::view('/sign_up','auth.sign_up')->name('sign_up');
-
+Route::get('/sign_up',[AuthController::class,'create'])->name('sign_up');
+Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
 
         ///////////////////////// Start admins of admin Dashboard /////////////////////////
 

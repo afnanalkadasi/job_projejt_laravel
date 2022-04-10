@@ -34,7 +34,7 @@
             
               </ul>
               <button class="btn btn-sm btn-outline-secondary me-auto" type="button"style="width: 80px;" ><a href="{{ route('sign_up') }}">إنشاء حساب</a>   </button>           
-          <button class="btn btn-sm btn-outline-secondary me-3" type="button" style="width: 80px;"> <a href="{{ route('login') }}">تسجيل الدخول</a> </button>           
+          <button class="btn btn-sm btn-outline-secondary me-3" type="button" style="width: 90px;"> <a href="{{ route('login') }}">تسجيل الدخول</a> </button>           
 
           <form class="d-flex me-auto search_he"  style="margin: 0 0 0 15px  ;">
             <input class="form-control " id="searchbar" onkeyup="search_ele()" type="search" placeholder="بحث" aria-label="Search">
