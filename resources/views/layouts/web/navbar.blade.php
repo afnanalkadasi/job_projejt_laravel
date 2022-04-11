@@ -17,17 +17,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('service') }}"> خدماتنا</a></li>
                 <li class="nav-item"><a class="nav-link " href="{{ route('about_as') }}"> من نحن</a></li>
                 <li class="nav-item"><a class="nav-link " href="{{ route('company') }}">شركاتنا</a></li> 
-<!--   
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    حساب المستخدم
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" style="color: black;" href="{{ route('information1') }}">معلومات المستخدم</a></li>
-                    <li><a class="dropdown-item" style="color: black;" href="{{ route('other_users') }}"> مستخدمين اخرين</a></li>
-                        <li><a class="dropdown-item" style="color: black;" href="#">خروج</a></li>
-                      </ul>
-                </li>  -->
+
                 <li class="nav-item"><a class="nav-link " href="{{ route('contact') }}">الاتصال بنا</a></li> 
                 <li class="nav_item"  id="en"  ><a href="#"class="nav-link "  >English</a></li>
                 <li class="nav_item" onclick="togglestyle()" id="ar"  style="display: none;"><a href="#"class="nav-link " >عربي</a></li>
