@@ -71,6 +71,10 @@ Route::view('/service','front.service')->name('service');
           Route::get('/user/skills',[SkillController::class,'listAll'])->name("skills");
           Route::get('/user/add_skill',[SkillController::class,'create'])->name('add_skill');
           Route::post('/user/save_skill',[SkillController::class,'store'])->name('save_skill');
+          Route::get('/user/edit_skill/{skill_id}',[SkillController::class,'edit'])->name('edit_skill');
+          Route::get('/user/toggle_skill/{skill_id}',[SkillController::class,'toggle'])->name('toggle_skill');
+          Route::post('/user/update_skill/{skill_id}',[SkillController::class,'update'])->name('update_skill');
+  
           Route::view('/user/edit_skill','user.edit_skill')->name('edit_skill');
 
           Route::get('/user/experiences',[ExperienceController::class,'listAll'])->name('experiences');
