@@ -34,7 +34,7 @@ Route::view('/job','front.jobs')->name('job');
 Route::view('-prof','front.user-prof')->name('user-prof');
 Route::view('/service','front.service')->name('service');
 
-
+//////////////////////ForgotPasswordController//////////////
 Route::get('/forget-password',  [ForgotPasswordController::class,'getEmail']);
 Route::post('/forget-password', [ForgotPasswordController::class,'postEmail'])->name('forget-password');
 Route::get('/reset-password/{token}', [ResetPasswordController::class,'getPassword']);
