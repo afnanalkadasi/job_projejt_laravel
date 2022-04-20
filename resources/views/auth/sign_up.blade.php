@@ -3,7 +3,6 @@
 @section('title') sign in @endsection
 
 @section('content')
-
         <section class="section_bc ">
               
                     <div class=" container">

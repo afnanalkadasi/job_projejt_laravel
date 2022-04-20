@@ -24,6 +24,8 @@
                                
                                   </div>  
                                   <br>    
+                                  <a style="float:left; color:white;"> نسيت؟</a>
+                                  <br>
                                   <div class="form-group">
                                       <label for="psw">الرقم السري</label>
                                     <input type="password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"  name="user_pass" > 
@@ -32,8 +34,8 @@
                                     @enderror
                                   </div>    
                                 <br>
-                                  <button type="submit" class="btn btn-outline-secondary ">دخول</button>
-                                  <label style="color: white;"><input type="checkbox" checked="checked" name="remember" > تذكرني</label>
+                                <a href="/forget-password">Forgot password?</a>
+                                <button type="submit" class="btn btn-outline-secondary ">دخول</button>
                                   <hr>
                                   <div class="form-group">
                                     <p class="not-yet">لاتملك حساب! &nbsp; &nbsp;&nbsp;<a href="/sign_up">إنشاء حساب</a></p>
