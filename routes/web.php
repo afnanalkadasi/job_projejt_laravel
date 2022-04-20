@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\user\SkillController;
 use App\Http\Controllers\user\ExperienceController;
 use App\Http\Controllers\user\CourseController;
@@ -16,6 +17,8 @@ use App\Http\Controllers\admin\SettingsController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
+use App\Http\Controllers\admin\ForgotPasswordController;
+use App\Http\Controllers\admin\ResetPasswordController;
 
 // Route::group(['prefix' => LaravelLocalization::setLocale(),
 //     'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function(){ //...
@@ -32,11 +35,14 @@ Route::view('-prof','front.user-prof')->name('user-prof');
 Route::view('/service','front.service')->name('service');
 
 
+Route::get('/forget-password',  [ForgotPasswordController::class,'getEmail']);
+Route::post('/forget-password', [ForgotPasswordController::class,'postEmail'])->name('forget-password');
+Route::get('/reset-password/{token}', [ResetPasswordController::class,'getPassword']);
+Route::post('/reset-password', [ResetPasswordController::class,'updatePassword']);
 
-
-        ///////////////////////// Start admins of admin Dashboard /////////////////////////
+///////////////////////// Start admins of admin Dashboard /////////////////////////
         Route::get('/generate_roles',[SettingsController::class,'generateRoles'])->name('generate_roles');
-
+    
         Route::get('/users',[AuthController::class,'listAll'])->name('users');
         Route::view('/edit_user','admin.edit_user')->name('edit_user');
         Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
@@ -44,7 +50,7 @@ Route::view('/service','front.service')->name('service');
         Route::get('/login',[AuthController::class,'showLogin'])->name('login');
         Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
         Route::get('/logout',[AuthController::class,'logout'])->name('logout');
-
+ 
   Route::group(['prefix'=>'admin'],function(){
 
           Route::group(['middleware'=>['auth','role:admin']],function(){

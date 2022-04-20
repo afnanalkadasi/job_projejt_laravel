@@ -34,7 +34,8 @@
                                     @enderror
                                   </div>    
                                 <br>
-                                  <button type="submit" class="btn btn-outline-secondary ">دخول</button>
+                                <a href="/forget-password">Forgot password?</a>
+                                <button type="submit" class="btn btn-outline-secondary ">دخول</button>
                                   <hr>
                                   <div class="form-group">
                                     <p class="not-yet">لاتملك حساب! &nbsp; &nbsp;&nbsp;<a href="/sign_up">إنشاء حساب</a></p>
